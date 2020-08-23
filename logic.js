@@ -55,9 +55,7 @@ const Tweeter = function () {
     }
 
     const removePost = function (postID) {
-        let id = parseInt(postID.slice(1))
-        console.log(id)
-        posts.splice(id-1, 1)
+        posts.splice(postID, 1)
     }
 
     const addComment = function (postID, text) {
@@ -83,10 +81,7 @@ const Tweeter = function () {
     }
 
     const removeComment = function(postID, commentID) {
-        let id = parseInt(postID.slice(1))
-        console.log(id)
-        let comID = parseInt(commentID.slice(1))
-        console.log(comID)
+       
         for (let i = 0; i < posts.length; i++) {
             for (let j = 0; j < posts[i].comments.length; j++) {
                 if (posts[i].id === postID && posts[i].comments[j].id === commentID) {

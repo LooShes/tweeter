@@ -10,7 +10,7 @@ const twit = function() {
     renderer.renderPosts(tweeter.getPosts())
 }
 
-$('.delete').on('click', function() {
+$('#posts').on('click', '.delete', function() {
     let postID = $(this).closest(".post-text").data().id
     tweeter.removePost(postID)
     renderer.renderPosts(tweeter.getPosts())
@@ -23,7 +23,7 @@ $('.comment').on('click', function() {
     renderer.renderPosts(tweeter.getPosts())
 })
 
-$('.fas').on('click',function() {
+$('#posts').on('click', '.fa-times', function() {
     let postID = $(this).closest(".post-text").data().id
     let commentID = $(this).closest(".comments").data().id
     console.log(postID)
