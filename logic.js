@@ -82,7 +82,7 @@ const Tweeter = function () {
         }
     }
 
-    const removeComment = function (postID, commentID) {
+    const removeComment = function(postID, commentID) {
         let id = parseInt(postID.slice(1))
         console.log(id)
         let comID = parseInt(commentID.slice(1))

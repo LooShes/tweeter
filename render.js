@@ -9,7 +9,7 @@ const Renderer = function () {
 
             for (let j = 0; j < posts[i].comments.length; j++) {
                 let commentID = posts[i].comments[j].id
-                $('*[data-id='+postID+']').append(`<div class='comments' data-id=${commentID}><i class="fas fa-times delete-comment"></i>${posts[i].comments[j].text}</div>`)
+                $('*[data-id='+postID+']').append(`<div class='comments' data-id=${commentID}><i class="fas fa-times" onClick={this.tweeter.removeComment(${postID}, ${commentID})}></i>${posts[i].comments[j].text}</div>`)
             }
 
             $('*[data-id='+postID+']').append(`<input type='text' id='comm-input' placeholder='Got something to say?'>`)
@@ -22,6 +22,5 @@ const Renderer = function () {
         renderPosts: renderPosts
     }
 }
-
 
 //$('.slide-link[data-slide="0"]').addClass('active');

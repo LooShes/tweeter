@@ -23,12 +23,12 @@ $('.comment').on('click', function() {
     renderer.renderPosts(tweeter.getPosts())
 })
 
-$('.delete-comment').on('click', function() {
+$('.fas').on('click',function() {
     let postID = $(this).closest(".post-text").data().id
     let commentID = $(this).closest(".comments").data().id
     console.log(postID)
     console.log(commentID)
-    tweeter.removeComment(postID, comText)
+    tweeter.removeComment(postID, commentID)
     renderer.renderPosts(tweeter.getPosts())
 })
 

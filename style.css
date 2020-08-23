@@ -69,7 +69,7 @@ body{
     font-size: 0.8em;
 }
 
-.delete-comment{
+.fa-times{
     cursor: pointer;
     color: #e74c3c;
 }
